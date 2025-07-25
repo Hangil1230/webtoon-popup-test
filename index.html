@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>웹툰 랜딩 테스트</title>
+
+  <!-- GTM 코드 자리 -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l;j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id=GTM-PVWXVGXG'+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PVWXVGXG');
+  </script>
+</head>
+
+<body style="height: 2000px;">
+  <!-- GTM noscript 백업 -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVWXVGXG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div id="content"></div>
+
+  <script>
+    const path = window.location.pathname;
+    const content = document.getElementById("content");
+
+    if (path.includes("landing-a")) {
+      content.innerHTML = "<h1>Landing A</h1><p>스크롤을 90% 하면 팝업이 나와야 합니다.</p>";
+    } else if (path.includes("landing-b")) {
+      content.innerHTML = "<h1>Landing B</h1><p>스크롤 테스트 페이지입니다.</p>";
+    } else if (path.includes("landing-c")) {
+      content.innerHTML = "<h1>Landing C</h1><p>광고용 랜딩 C입니다.</p>";
+    } else if (path.includes("/a2")) {
+      content.innerHTML = "<h1>A 작품 본편 페이지</h1>";
+    } else if (path.includes("/b2")) {
+      content.innerHTML = "<h1>B 작품 본편 페이지</h1>";
+    } else if (path.includes("/c2")) {
+      content.innerHTML = "<h1>C 작품 본편 페이지</h1>";
+    } else {
+      content.innerHTML = "<h1>홈페이지입니다</h1><p>landing-a, b, c로 접속해 보세요.</p>";
+    }
+  </script>
+</body>
+</html>
